@@ -1,22 +1,49 @@
+---
+import { Header } from '../shared/ui/Header';
+import { Footer } from '../shared/ui/Footer';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Surf - Переносим бизнес в карман пользователя" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Surf - Разработка IT-решений для бизнеса</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<slot />
+	<body class="bg-white text-black min-h-screen flex flex-col">
+		<Header client:load />
+		<main class="flex-1">
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 
-<style>
-	html,
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+	
+	:root {
+		--font-mono: 'JetBrains Mono', monospace;
+		--font-sans: 'Inter', sans-serif;
+	}
+	
+	html {
+		font-family: var(--font-sans);
+		background: #fff;
+		color: #000;
+	}
+	
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+	}
+	
+	.font-mono {
+		font-family: var(--font-mono);
 	}
 </style>
