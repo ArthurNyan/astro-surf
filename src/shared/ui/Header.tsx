@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 
-export const Header: React.FC = () => {
+export const Header = () => {
     return (
         <header className="bg-white py-6">
             <div className="container mx-auto px-4 max-w-7xl">
@@ -22,8 +22,10 @@ export const Header: React.FC = () => {
                         </nav>
                     </div>
 
-                    <div className="flex items-center space-x-4">
-                        <span className="hidden md:block px-4 py-3 text-xs font-mono uppercase">en</span>
+                    <div className="flex items-center space-x-2">
+                        <div className="hidden md:block">
+                            <Button variant="light" >en</Button>
+                        </div>
                         <div className="hidden md:block">
                             <Button>Начать разработку</Button>
                         </div>

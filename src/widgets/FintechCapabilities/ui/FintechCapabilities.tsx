@@ -1,9 +1,6 @@
-import React from 'react';
-
 export const FintechCapabilities = () => {
     return (
-        <section className="py-20 md:py-32 relative overflow-hidden">
-            {/* Декоративный фон */}
+        <section className="py-20 md:py-32 relative overflow-hidden bg-[url('/assets/images/services-bg.png')] bg-cover bg-center">
             <div className="absolute -left-64 top-1/4 w-96 h-96 bg-purple-600 rounded-full opacity-10 blur-3xl"></div>
             <div className="absolute -right-64 top-3/4 w-96 h-96 bg-green-400 rounded-full opacity-10 blur-3xl"></div>
 
@@ -15,7 +12,7 @@ export const FintechCapabilities = () => {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm">
                         <div className="bg-black text-white inline-flex items-center justify-center w-10 h-10 rounded-full mb-6">
                             <span className="font-mono">1</span>
