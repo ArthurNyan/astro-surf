@@ -1,0 +1,1 @@
+export { FintechSolutions } from './ui/FintechSolutions'; 

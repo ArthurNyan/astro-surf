@@ -1,0 +1,1 @@
+export { FintechTestimonials } from './ui/FintechTestimonials'; 

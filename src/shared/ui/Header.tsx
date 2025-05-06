@@ -7,20 +7,26 @@ export const Header: React.FC = () => {
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                        <img src="/assets/surf-logo.svg" alt="Surf" className="h-8 mr-10" />
+                        <a href="/">
+                            <img src="/images/surf-logo.svg" alt="Surf" className="h-8 mr-10" />
+                        </a>
 
                         <nav className="hidden md:flex items-center space-x-1">
-                            <NavItem>Услуги</NavItem>
-                            <NavItem>Проекты</NavItem>
-                            <NavItem>Экспертиза</NavItem>
-                            <NavItem>Блог</NavItem>
-                            <NavItem>О нас</NavItem>
-                            <NavItem>Карьера</NavItem>
+                            <NavItem href="/fintech">Финтех</NavItem>
+                            <NavItem href="#">Услуги</NavItem>
+                            <NavItem href="#">Проекты</NavItem>
+                            <NavItem href="#">Экспертиза</NavItem>
+                            <NavItem href="#">Блог</NavItem>
+                            <NavItem href="#">О нас</NavItem>
+                            <NavItem href="#">Карьера</NavItem>
                         </nav>
                     </div>
 
-                    <div className="hidden md:block">
-                        <Button>Начать разработку</Button>
+                    <div className="flex items-center space-x-4">
+                        <span className="hidden md:block px-4 py-3 text-xs font-mono uppercase">en</span>
+                        <div className="hidden md:block">
+                            <Button>Начать разработку</Button>
+                        </div>
                     </div>
 
                     <button className="block md:hidden">
@@ -34,10 +40,10 @@ export const Header: React.FC = () => {
     );
 };
 
-const NavItem: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const NavItem: React.FC<{ children: React.ReactNode; href: string }> = ({ children, href }) => {
     return (
         <a
-            href="#"
+            href={href}
             className="px-4 py-3 text-xs font-mono uppercase bg-[#EEEEEE] rounded-md hover:bg-gray-200 transition-colors"
         >
             {children}

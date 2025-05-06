@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { FintechHero } from "../widgets/FintechHero";
+import { FintechProjects } from "../widgets/FintechProjects";
+import { FintechSolutions } from "../widgets/FintechSolutions";
+import { FintechCapabilities } from "../widgets/FintechCapabilities";
+import { FintechTestimonials } from "../widgets/FintechTestimonials";
+import { ContactForm } from "../features/ContactForm";
+---
+
+<Layout>
+  <div class="min-h-screen">
+    <FintechHero client:load />
+    <FintechTestimonials client:load />
+    <FintechProjects client:load />
+    <FintechSolutions client:load />
+    <FintechCapabilities client:load />
+    <div class="py-20 bg-white">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <div class="flex flex-wrap justify-center items-center gap-16">
+          <img
+            src="/assets/images/bank-logo-1.svg"
+            alt="Банк"
+            class="h-10 grayscale opacity-70"
+          />
+          <img
+            src="/assets/images/bank-logo-2.svg"
+            alt="Банк"
+            class="h-10 grayscale opacity-70"
+          />
+          <img
+            src="/assets/images/bank-logo-3.svg"
+            alt="Банк"
+            class="h-10 grayscale opacity-70"
+          />
+          <img
+            src="/assets/images/bank-logo-4.svg"
+            alt="Банк"
+            class="h-10 grayscale opacity-70"
+          />
+          <img
+            src="/assets/images/bank-logo-5.svg"
+            alt="Банк"
+            class="h-10 grayscale opacity-70"
+          />
+        </div>
+      </div>
+    </div>
+    <ContactForm client:load />
+  </div>
+</Layout>
